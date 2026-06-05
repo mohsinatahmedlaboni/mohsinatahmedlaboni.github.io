@@ -4,11 +4,18 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mohsinat Ahmed Laboni</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     :root {
       --navy: #073259;
       --sage: #b1bca0;
@@ -18,15 +25,29 @@
       --font: 'Poppins', Arial, sans-serif;
       --max: 900px;
     }
-    html { scroll-behavior: smooth; }
-    body { font-family: var(--font); color: var(--ink); background: #fff; font-weight: 300; font-size: 15px; line-height: 1.8; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font);
+      color: var(--ink);
+      background: #fff;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 1.8;
+    }
 
     /* NAV */
     nav {
       background: var(--navy);
-      position: sticky; top: 0; z-index: 100;
+      position: sticky;
+      top: 0;
+      z-index: 100;
       border-bottom: 3px solid var(--sage);
     }
+
     .nav-inner {
       max-width: var(--max);
       margin: 0 auto;
@@ -36,6 +57,7 @@
       justify-content: space-between;
       height: 54px;
     }
+
     .nav-brand {
       color: #fff;
       text-decoration: none;
@@ -43,8 +65,17 @@
       font-size: 15px;
       letter-spacing: 0.02em;
     }
-    .nav-brand span { color: var(--sage); }
-    .nav-links { list-style: none; display: flex; gap: 2px; }
+
+    .nav-brand span {
+      color: var(--sage);
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2px;
+    }
+
     .nav-links a {
       color: rgba(255,255,255,0.7);
       text-decoration: none;
@@ -55,14 +86,23 @@
       border-radius: 4px;
       transition: all 0.2s;
     }
-    .nav-links a:hover, .nav-links a.active {
+
+    .nav-links a:hover,
+    .nav-links a.active {
       color: #fff;
       background: rgba(177,188,160,0.25);
     }
-    .nav-links a.active { color: var(--sage); }
+
+    .nav-links a.active {
+      color: var(--sage);
+    }
 
     /* PAGE */
-    .page { max-width: var(--max); margin: 0 auto; padding: 64px 24px 80px; }
+    .page {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 64px 24px 80px;
+    }
 
     /* HOME HERO */
     .home-grid {
@@ -71,13 +111,7 @@
       gap: 56px;
       align-items: start;
     }
-    .home-name {
-      font-size: clamp(32px, 5.5vw, 52px);
-      font-weight: 700;
-      color: var(--navy);
-      line-height: 1.1;
-      margin-bottom: 6px;
-    }
+
     .home-title {
       font-size: 13px;
       font-weight: 500;
@@ -86,9 +120,38 @@
       text-transform: uppercase;
       margin-bottom: 28px;
     }
-    .home-bio { color: var(--muted); font-size: 15px; line-height: 1.9; }
-    .home-bio p + p { margin-top: 14px; }
-    .home-bio strong { color: var(--navy); font-weight: 600; }
+
+    .home-name {
+      font-size: clamp(32px, 5.5vw, 52px);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .home-name .first-name {
+      color: var(--navy);
+      display: inline-block;
+    }
+
+    .home-name .last-name {
+      color: var(--sage);
+      display: inline-block;
+    }
+
+    .home-bio {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .home-bio p + p {
+      margin-top: 14px;
+    }
+
+    .home-bio strong {
+      color: var(--navy);
+      font-weight: 600;
+    }
 
     .home-links {
       display: flex;
@@ -96,6 +159,7 @@
       gap: 10px;
       margin-top: 32px;
     }
+
     .home-links a {
       color: var(--navy);
       text-decoration: none;
@@ -107,21 +171,41 @@
       border-radius: 4px;
       transition: all 0.2s;
     }
-    .home-links a:hover { background: var(--navy); color: #fff; }
-    .home-links a.filled { background: var(--navy); color: #fff; }
-    .home-links a.filled:hover { background: transparent; color: var(--navy); }
+
+    .home-links a:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .home-links a.filled {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .home-links a.filled:hover {
+      background: transparent;
+      color: var(--navy);
+    }
 
     /* PHOTO */
-    .photo-wrap { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+    .photo-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
     .photo-wrap img {
-      width: 185px; height: 230px;
+      width: 185px;
+      height: 230px;
       object-fit: cover;
       border-radius: 4px;
       border: 3px solid var(--sage);
     }
-    /* placeholder */
+
     .photo-placeholder {
-      width: 185px; height: 230px;
+      width: 185px;
+      height: 230px;
       background: var(--sage-pale);
       border: 2px dashed var(--sage);
       border-radius: 4px;
@@ -147,7 +231,11 @@
       opacity: 0.55;
       filter: grayscale(1);
     }
-    .affil-row img { height: 28px; object-fit: contain; }
+
+    .affil-row img {
+      height: 28px;
+      object-fit: contain;
+    }
 
     footer {
       border-top: 1px solid #eee;
@@ -158,73 +246,107 @@
     }
 
     @media (max-width: 680px) {
-      .home-grid { grid-template-columns: 1fr; }
-      .photo-wrap { align-items: flex-start; }
-      .nav-links a { font-size: 10px; padding: 5px 7px; }
+      .home-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-wrap {
+        align-items: flex-start;
+      }
+
+      .nav-inner {
+        height: auto;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+      }
+
+      .nav-links a {
+        font-size: 10px;
+        padding: 5px 7px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <a class="nav-brand" href="index.html">Mohsinat <span>A. Laboni</span></a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="cv.html">CV</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">Mohsinat <span>A. Laboni</span></a>
 
-<div class="page">
-  <div class="home-grid">
-    <div>
-      <p class="home-title">Environmental Engineer &amp; Researcher</p>
-      <h1 class="home-name">
-        <span class="name-navy">Mohsinat</span><br>
-        <span class="name-sage">Ahmed Laboni</span>
-      </h1>
-      <h1 class="home-name">Mohsinat<br>Ahmed Laboni</h1>
-      <div class="home-bio">
-        <p>
-          Research Assistant jointly affiliated with the
-          <strong>University of Washington</strong> and
-          <strong>Bangladesh University of Engineering &amp; Technology (BUET)</strong>,
-          working on high-resolution national emission inventories and air quality modelling for Bangladesh.
-        </p>
-        <p>
-          B.Sc. in Civil Engineering (Environmental) from
-          <strong>Islamic University of Technology (IUT)</strong>, CGPA 3.65/4.00.
-          Research spans microplastic removal, PM₂.₅ prediction via machine learning,
-          carbon emissions analysis, and GIS-based infrastructure design.
-        </p>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page">
+    <div class="home-grid">
+      <div>
+        <p class="home-title">Environmental Engineer &amp; Researcher</p>
+
+        <h1 class="home-name">
+          <span class="first-name">Mohsinat</span><br>
+          <span class="last-name">Ahmed Laboni</span>
+        </h1>
+
+        <div class="home-bio">
+          <p>
+            Research Assistant jointly affiliated with the
+            <strong>University of Washington</strong> and
+            <strong>Bangladesh University of Engineering &amp; Technology (BUET)</strong>,
+            working on high-resolution national emission inventories and air quality modelling for Bangladesh.
+          </p>
+
+          <p>
+            B.Sc. in Civil Engineering (Environmental) from
+            <strong>Islamic University of Technology (IUT)</strong>, CGPA 3.65/4.00.
+            Research spans microplastic removal, PM₂.₅ prediction via machine learning,
+            carbon emissions analysis, and GIS-based infrastructure design.
+          </p>
+        </div>
+
+        <div class="home-links">
+          <a class="filled" href="cv.html">CV</a>
+          <a href="mailto:mohsinatahmed@iut-dhaka.edu">Email</a>
+          <a href="https://scholar.google.com/citations?user=O_qegIwAAAAJ" target="_blank">Google Scholar</a>
+          <a href="https://linkedin.com/in/mohsinat-ahmed-laboni" target="_blank">LinkedIn</a>
+          <a href="https://orcid.org/0009-0007-2789-8315" target="_blank">ORCID</a>
+          <a href="https://researchgate.net/profile/Mohsinat-Laboni" target="_blank">ResearchGate</a>
+        </div>
       </div>
-      <div class="home-links">
-        <a class="filled" href="cv.html">CV</a>
-        <a href="mailto:mohsinatahmed@iut-dhaka.edu">Email</a>
-        <a href="https://scholar.google.com/citations?user=O_qegIwAAAAJ" target="_blank">Google Scholar</a>
-        <a href="https://linkedin.com/in/mohsinat-ahmed-laboni" target="_blank">LinkedIn</a>
-        <a href="https://orcid.org/0009-0007-2789-8315" target="_blank">ORCID</a>
-        <a href="https://researchgate.net/profile/Mohsinat-Laboni" target="_blank">ResearchGate</a>
+
+      <div class="photo-wrap">
+        <!-- Replace this placeholder with:
+        <img src="photo.jpg" alt="Mohsinat Ahmed Laboni">
+        -->
+
+        <div class="photo-placeholder">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+          your photo
+        </div>
       </div>
     </div>
-
-    <div class="photo-wrap">
-      <!-- Replace with: <img src="photo.jpg" alt="Mohsinat Ahmed Laboni"> -->
-      <div class="photo-placeholder">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-        your photo
-      </div>
-    </div>
   </div>
-</div>
 
-<footer>© 2026 Mohsinat Ahmed Laboni · Dhaka, Bangladesh</footer>
+  <footer>© 2026 Mohsinat Ahmed Laboni · Dhaka, Bangladesh</footer>
+
 </body>
 </html>
