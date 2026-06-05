@@ -111,8 +111,8 @@
 
     .project {
       display: grid;
-      grid-template-columns: 260px 1fr;
-      gap: 36px;
+      grid-template-columns: 300px 1fr;
+      gap: 30px;
       align-items: start;
       padding: 36px 0;
       border-top: 1px solid #eee;
@@ -123,15 +123,16 @@
     }
 
     .project-img-placeholder {
-      width: 260px;
-      height: 170px;
+      width: 300px;
+      height: 190px;
       background: var(--sage-pale);
       border: 2px dashed var(--sage);
-      border-radius: 4px;
+      border-radius: 6px;
       overflow: hidden;
     }
 
-    .project-img-placeholder img {
+    .project-img-placeholder img,
+    .project-img-placeholder video {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -227,7 +228,7 @@
 
       .project-img-placeholder {
         width: 100%;
-        height: 180px;
+        height: 240px;
       }
     }
   </style>
@@ -283,10 +284,9 @@
     </div>
   </div>
 
-
-<div class="project">
+  <div class="project">
     <div class="project-img-placeholder">
-      <img src="skarionproject.png" alt="Fiber Network (Representative Only)">
+      <img src="skarionproject.png" alt="Fiber Network representative image">
     </div>
 
     <div>
