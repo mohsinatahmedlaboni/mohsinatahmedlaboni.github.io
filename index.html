@@ -4,217 +4,811 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mohsinat Ahmed Laboni</title>
-  <meta name="description" content="Academic and research portfolio of Mohsinat Ahmed Laboni." />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Mohsinat Ahmed Laboni – Environmental Engineer and Researcher at University of Washington & BUET. Research in air quality, microplastics, and carbon emissions." />
+  <meta name="keywords" content="Mohsinat Ahmed Laboni, Environmental Engineer, IUT, BUET, air quality, microplastics, carbon emissions, Bangladesh" />
+  <meta property="og:title" content="Mohsinat Ahmed Laboni – Environmental Engineer" />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f7f5f0;
+      --surface: #ffffff;
+      --ink: #1a1814;
+      --ink-soft: #4a453d;
+      --ink-muted: #8a8278;
+      --accent: #2d5f3f;
+      --accent-light: #e8f0eb;
+      --rule: #ddd9d0;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'DM Sans', system-ui, sans-serif;
+      --font-mono: 'DM Mono', monospace;
+      --max: 780px;
+      --nav-h: 56px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: rgba(247, 245, 240, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--rule);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-inner {
+      width: 100%;
+      max-width: var(--max);
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    /* ── LAYOUT ── */
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section {
+      padding: 80px 0 60px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    section:last-of-type { border-bottom: none; }
+
+    /* ── HERO ── */
+    #home {
+      padding-top: calc(var(--nav-h) + 72px);
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .hero-text h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(36px, 6vw, 52px);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+    }
+
+    .hero-title {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 400;
+      margin-bottom: 28px;
+    }
+
+    .hero-bio {
+      color: var(--ink-soft);
+      font-size: 15px;
+      line-height: 1.8;
+      max-width: 520px;
+    }
+
+    .hero-bio p + p { margin-top: 14px; }
+
+    .hero-photo {
+      width: 180px;
+      height: 220px;
+      object-fit: cover;
+      border: 1px solid var(--rule);
+      display: block;
+      /* placeholder style — replace with your actual photo */
+      background: var(--accent-light);
+    }
+
+    .hero-photo-placeholder {
+      width: 180px;
+      height: 220px;
+      background: linear-gradient(160deg, var(--accent-light), #d4e6da);
+      border: 1px solid var(--rule);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: var(--accent);
+    }
+
+    .hero-photo-placeholder svg { opacity: 0.5; }
+    .hero-photo-placeholder span {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.6;
+      text-align: center;
+      padding: 0 12px;
+    }
+
+    .btn-cv {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 28px;
+      padding: 10px 22px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 400;
+      transition: background 0.2s;
+    }
+
+    .btn-cv:hover { background: #1e4229; }
+
+    /* ── SECTION HEADINGS ── */
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 36px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(24px, 4vw, 32px);
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    h3 {
+      font-family: var(--font-serif);
+      font-size: 19px;
+      font-weight: 400;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+
+    /* ── RESEARCH ── */
+    .paper {
+      margin-bottom: 44px;
+      padding-bottom: 44px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .paper:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    .paper-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      font-weight: 400;
+    }
+
+    .badge-pub { background: var(--accent); color: #fff; }
+    .badge-wip { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+    .badge-wp  { background: var(--accent-light); color: var(--accent); }
+
+    .paper-venue {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink-muted);
+    }
+
+    .paper-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+
+    .paper-links a {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .paper-links a:hover { border-color: var(--accent); }
+
+    .abstract {
+      margin-top: 14px;
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    details summary {
+      cursor: pointer;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+      list-style: none;
+      margin-top: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      user-select: none;
+    }
+
+    details summary::before { content: '+ '; }
+    details[open] summary::before { content: '− '; }
+    details[open] .abstract { display: block; }
+
+    /* ── EXPERIENCE ── */
+    .entries { display: flex; flex-direction: column; gap: 32px; }
+
+    .entry {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 0 24px;
+    }
+
+    .entry-date {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink-muted);
+      padding-top: 3px;
+      line-height: 1.5;
+    }
+
+    .entry-role {
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+
+    .entry-org {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .entry-body {
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .entry-body ul {
+      padding-left: 16px;
+      margin-top: 4px;
+    }
+
+    .entry-body li { margin-bottom: 3px; }
+
+    /* ── SKILLS GRID ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+      margin-top: 8px;
+    }
+
+    .skill-cell {
+      background: var(--bg);
+      padding: 16px 18px;
+    }
+
+    .skill-cat {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 6px;
+    }
+
+    .skill-list {
+      font-size: 13px;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+
+    /* ── CERTIFICATIONS ── */
+    .cert-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .cert-item {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--ink-soft);
+    }
+
+    .cert-item::before {
+      content: '—';
+      font-family: var(--font-mono);
+      color: var(--ink-muted);
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+
+    .cert-issuer {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink-muted);
+      margin-left: auto;
+      white-space: nowrap;
+    }
+
+    /* ── CONTACT ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .contact-block h3 {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 12px;
+      font-weight: 400;
+    }
+
+    .contact-block a {
+      display: block;
+      color: var(--ink-soft);
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 8px;
+      transition: color 0.2s;
+    }
+
+    .contact-block a:hover { color: var(--accent); }
+
+    /* ── FOOTER ── */
+    footer {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 24px 48px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink-muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* ── ANIMATIONS ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      #home {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-photo-placeholder {
+        width: 120px;
+        height: 150px;
+        order: -1;
+      }
+
+      .entry {
+        grid-template-columns: 1fr;
+      }
+
+      .entry-date { margin-bottom: 4px; }
+
+      .contact-grid { grid-template-columns: 1fr; }
+
+      .nav-links { gap: 16px; }
+
+      .cert-issuer { display: none; }
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header" id="home">
-    <nav class="navbar">
-      <a class="brand" href="#home">Mohsinat Ahmed Laboni</a>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#publications">Publications</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
 
-    <section class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">Civil & Environmental Engineering | Air Quality | Carbon Analysis | GIS</p>
-        <h1>Mohsinat Ahmed Laboni</h1>
-        <p class="hero-text">
-          Researcher and civil engineering graduate focused on environmental engineering,
-          air quality modeling, carbon emissions analysis, microplastic removal, and geospatial data analysis.
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="#home">Mohsinat A. Laboni</a>
+    <ul class="nav-links">
+      <li><a href="#research">Research</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero-text fade-in">
+      <p class="hero-title">Environmental Engineer &amp; Researcher</p>
+      <h1>Mohsinat<br>Ahmed Laboni</h1>
+      <div class="hero-bio">
+        <p>
+          Welcome! I am a Research Assistant jointly affiliated with the
+          <strong>University of Washington</strong> and
+          <strong>Bangladesh University of Engineering &amp; Technology (BUET)</strong>,
+          working on high-resolution national emission inventories and air quality
+          modelling for Bangladesh.
         </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#publications">View Publications</a>
-          <a class="button secondary" href="Mohsinat_CV_PrM.docx">Download CV</a>
+        <p>
+          I hold a B.Sc. in Civil Engineering (Environmental specialization) from
+          <strong>Islamic University of Technology (IUT)</strong>, graduating with
+          a CGPA of 3.65/4.00. My research spans microplastic removal, PM₂.₅ prediction
+          using machine learning, carbon emissions analysis, and GIS-based infrastructure design.
+        </p>
+        <p>
+          I have published at peer-reviewed international conferences, with a journal
+          submission under review and additional work in progress.
+        </p>
+      </div>
+      <!-- Replace href with your actual CV file once uploaded to the repo -->
+      <a class="btn-cv" href="Mohsinat_CV_PrM.pdf" target="_blank">
+        ↓ Download CV
+      </a>
+    </div>
+
+    <!-- Replace this block with <img class="hero-photo" src="photo.jpg" alt="Mohsinat Ahmed Laboni"> -->
+    <div class="hero-photo-placeholder fade-in" style="transition-delay:0.15s">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+        <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+      </svg>
+      <span>Add your photo here</span>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research" class="fade-in">
+    <p class="section-label">Research</p>
+
+    <div class="paper">
+      <div class="paper-meta">
+        <span class="badge badge-wp">Under Review</span>
+        <span class="paper-venue">Journal Submission · 2025</span>
+      </div>
+      <h3>Predicting and Enhancing Microplastics Removal: A Data-Driven Mixture-of-Experts Approach for Coagulant-Specific Performance</h3>
+      <p style="font-size:13px;color:var(--ink-muted);margin-top:4px;">
+        With R. M. Prantor, M. R. Karim, M. S. Islam, A. B. M. Baki, W. Sadiqa, A. T. Nabila, &amp; G. Andaluri
+      </p>
+      <details>
+        <summary>Abstract</summary>
+        <p class="abstract">
+          This paper develops a data-driven Mixture-of-Experts framework to predict and enhance
+          the removal of microplastics through coagulation–flocculation treatment, modelling
+          coagulant-specific performance across varied water quality conditions.
+        </p>
+      </details>
+    </div>
+
+    <div class="paper">
+      <div class="paper-meta">
+        <span class="badge badge-pub">Published</span>
+        <span class="paper-venue">7th ICACE · 2024 · pp. 3316–3323</span>
+      </div>
+      <h3>Study of Yearly Variation of Water Quality Parameters and Indices of the Turag River of Bangladesh</h3>
+      <p style="font-size:13px;color:var(--ink-muted);margin-top:4px;">
+        With R. Tashfiah &amp; A. Ahsan
+      </p>
+      <div class="paper-links">
+        <a href="https://www.researchgate.net/publication/397638564" target="_blank">ResearchGate →</a>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-meta">
+        <span class="badge badge-pub">Published</span>
+        <span class="paper-venue">ICCERI · 2025 · pp. 2891–2896</span>
+      </div>
+      <h3>A Data-Driven Approach to PM₂.₅ Prediction in Dhaka Using Machine Learning Techniques</h3>
+      <p style="font-size:13px;color:var(--ink-muted);margin-top:4px;">
+        With R. Tashfiah &amp; A. Ahsan
+      </p>
+      <div class="paper-links">
+        <a href="https://www.researchgate.net/publication/399962032" target="_blank">ResearchGate →</a>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-meta">
+        <span class="badge badge-wip">In Progress</span>
+        <span class="paper-venue">CEDAAH-2026 Conference</span>
+      </div>
+      <h3>Rights and Realities: Evaluating WASH Inequalities in Slums Across Dhaka's Two City Corporations</h3>
+      <p style="font-size:13px;color:var(--ink-muted);margin-top:4px;">
+        With N. A. Rimi, R. M. Prantor, N. M. Absar, Z. Fariha &amp; K. Sharaf
+      </p>
+    </div>
+
+    <div class="paper">
+      <div class="paper-meta">
+        <span class="badge badge-wip">In Progress</span>
+        <span class="paper-venue">Expected submission · 2026</span>
+      </div>
+      <h3>Microplastic Abundance in Urban Road Dust Across Dhaka City, Bangladesh: A Probabilistic Modelling Approach</h3>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="fade-in">
+    <p class="section-label">Experience</p>
+    <div class="entries">
+
+      <div class="entry">
+        <div class="entry-date">Jun 2026 –<br>Present</div>
+        <div>
+          <div class="entry-role">Research Assistant</div>
+          <div class="entry-org">University of Washington &amp; BUET · Dhaka, Bangladesh</div>
+          <div class="entry-body">
+            <ul>
+              <li>Developing a high-resolution national emission inventory for Bangladesh</li>
+              <li>Supporting reduced-complexity and empirical air pollution modelling</li>
+              <li>Assisting with PM₂.₅ monitoring, chemical speciation, and source apportionment</li>
+              <li>Processing air quality, meteorological, satellite, and GIS datasets</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </section>
-  </header>
 
-  <main>
-    <section class="section card" id="about">
-      <h2>About</h2>
-      <p>
-        I hold a B.Sc. in Civil Engineering with a specialization in Environmental Engineering
-        from Islamic University of Technology (IUT), Bangladesh. My academic and professional work
-        sits at the intersection of environmental monitoring, climate-related analysis, GIS, and
-        data-driven engineering research.
-      </p>
-      <p>
-        My recent work includes national emission inventory development, PM₂.₅ monitoring and modeling,
-        carbon emissions analysis, ESG-linked intervention assessment, and microplastic removal research.
-      </p>
-    </section>
-
-    <section class="section" id="research">
-      <h2>Research Interests</h2>
-      <div class="grid">
-        <article class="mini-card">
-          <h3>Air Quality & Emissions</h3>
-          <p>Emission inventories, PM₂.₅ monitoring, chemical speciation, source apportionment, and policy-oriented air quality research.</p>
-        </article>
-        <article class="mini-card">
-          <h3>Carbon & ESG Analysis</h3>
-          <p>GHG Protocol, IPCC-guided carbon accounting, ISO 14064 reporting, and intervention-based emissions assessment.</p>
-        </article>
-        <article class="mini-card">
-          <h3>Water & Microplastics</h3>
-          <p>Surface water treatment, coagulation-flocculation, microplastic quantification, SEM, FT-IR, and microscopy-based characterization.</p>
-        </article>
-        <article class="mini-card">
-          <h3>GIS & Infrastructure</h3>
-          <p>GIS-based environmental analysis, OSP fiber network design, route planning, HLD/LLD documentation, and spatial datasets.</p>
-        </article>
+      <div class="entry">
+        <div class="entry-date">Nov 2025 –<br>May 2026</div>
+        <div>
+          <div class="entry-role">Research Officer</div>
+          <div class="entry-org">CarboBon · Dhaka, Bangladesh</div>
+          <div class="entry-body">
+            <ul>
+              <li>Carbon emissions analysis aligned with GHG Protocol, IPCC guidelines &amp; ISO 14064</li>
+              <li>Supported carbon projects in biochar, sustainable agriculture, and biogas</li>
+              <li>Contributed to digital MRV tool development and field research</li>
+              <li>Participated in KII, FGDs, and on-site factory data verification</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </section>
 
-    <section class="section card" id="education">
-      <h2>Education</h2>
-      <div class="timeline-item">
-        <h3>B.Sc. in Civil Engineering</h3>
-        <p><strong>Islamic University of Technology (IUT), Bangladesh</strong></p>
-        <p>Specialization: Environmental Engineering | CGPA: 3.65/4.00</p>
-        <p>
-          Thesis: Evaluation of Chemical and Natural Filtration Media for Microplastic Removal from Surface Water
-          Following Coagulation-Flocculation Treatment.
-        </p>
+      <div class="entry">
+        <div class="entry-date">Feb 2026 –<br>Present</div>
+        <div>
+          <div class="entry-role">OSP Design Engineer</div>
+          <div class="entry-org">Skarion / Inuberry Global · Fairfax, Virginia, USA (Remote)</div>
+          <div class="entry-body">
+            <ul>
+              <li>High-Level Design (HLD) using AutoCAD and GIS tools</li>
+              <li>Route planning, network layout design, and documentation for telecom infrastructure</li>
+              <li>Designed 400,000+ ft of XGS-PON networks; led 500+ residential fiber deployments</li>
+              <li>Supported $2.8M+ in procurement for Holly Springs and Greensboro fiber projects</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </section>
 
-    <section class="section" id="experience">
-      <h2>Experience</h2>
-
-      <div class="timeline">
-        <article class="timeline-item">
-          <span class="date">June 2026 – Present</span>
-          <h3>Research Assistant</h3>
-          <p><strong>University of Washington & Bangladesh University of Engineering and Technology</strong></p>
-          <p>
-            Contributing to a high-resolution national emission inventory for Bangladesh, supporting air pollution modeling,
-            PM₂.₅ monitoring, chemical speciation, source apportionment, and GIS/satellite data analysis.
-          </p>
-        </article>
-
-        <article class="timeline-item">
-          <span class="date">Nov 2025 – May 2026</span>
-          <h3>Research Officer</h3>
-          <p><strong>CarboBon</strong></p>
-          <p>
-            Conducted carbon emissions analysis aligned with GHG Protocol, IPCC guidelines, and ISO 14064,
-            supported factory visits, data verification, digital MRV, and carbon project research.
-          </p>
-        </article>
-
-        <article class="timeline-item">
-          <span class="date">Feb 2026 – Present</span>
-          <h3>Outside Plant Design Engineer</h3>
-          <p><strong>Skarion, Inuberry Global</strong></p>
-          <p>
-            Worked on HLD using AutoCAD and GIS tools, supporting route planning, network layout design,
-            and documentation for telecommunication infrastructure.
-          </p>
-        </article>
-
-        <article class="timeline-item">
-          <span class="date">Aug 2022 – Dec 2023</span>
-          <h3>Research and Feature Journalist</h3>
-          <p><strong>The Financial Express Bangladesh & Industry Insider</strong></p>
-          <p>
-            Researched, interviewed professionals and experts, and authored feature articles on education,
-            engineering, and cultural affairs.
-          </p>
-        </article>
+      <div class="entry">
+        <div class="entry-date">Aug 2022 –<br>Dec 2023</div>
+        <div>
+          <div class="entry-role">Research &amp; Feature Journalist</div>
+          <div class="entry-org">The Financial Express BD &amp; Industry Insider BD · Dhaka</div>
+          <div class="entry-body">
+            Authored feature articles on education, engineering, and cultural affairs, drawing on in-depth expert interviews.
+          </div>
+        </div>
       </div>
-    </section>
 
-    <section class="section card" id="projects">
-      <h2>Selected Projects</h2>
+    </div>
+  </section>
 
-      <article class="project">
-        <h3>PROGRESS: Promoting Green Growth in the RMG Sector</h3>
-        <p>
-          Managed decarbonization data for 15+ RMG factories, validated 8.46M kgCO₂e in emission reductions,
-          mapped 37 interventions, and supported GHG Protocol and ISO-compliant reporting roadmaps.
-        </p>
-      </article>
+  <!-- SKILLS -->
+  <section id="skills" class="fade-in">
+    <p class="section-label">Technical Skills &amp; Certifications</p>
 
-      <article class="project">
-        <h3>Holly Springs Fiber Optics Internet Project</h3>
-        <p>
-          Designed 400,000+ ft of XGS-PON networks, created 100+ permit packages and BOMs,
-          and supported $2.8M+ in procurement using ArcGIS Pro and AutoCAD.
-        </p>
-      </article>
-
-      <article class="project">
-        <h3>Greensboro Fiber Optics Internet Project</h3>
-        <p>
-          Developed BOQs and AutoCAD construction drawings for 170,000+ ft of underground conduit and
-          2,000+ residential deployments, totaling approximately $1.7M in OSP procurement.
-        </p>
-      </article>
-    </section>
-
-    <section class="section" id="publications">
-      <h2>Publications</h2>
-
-      <article class="publication">
-        <h3>Study of Yearly Variation of Water Quality Parameters and Indices of the Turag River of Bangladesh</h3>
-        <p>Laboni, M. A., Tashfiah, R., & Ahsan, A. (2024). Proceedings of the 7th International Conference on Advances in Civil Engineering.</p>
-      </article>
-
-      <article class="publication">
-        <h3>A Data-Driven Approach to PM₂.₅ Prediction in Dhaka Using Machine Learning Techniques</h3>
-        <p>Laboni, M. A., Tashfiah, R., & Ahsan, A. (2025). Proceedings of the International Conference on Civil Engineering Research & Innovations.</p>
-      </article>
-
-      <h2 class="subheading">Work in Progress</h2>
-      <ul class="clean-list">
-        <li>Predicting and enhancing microplastics removal using a data-driven mixture-of-experts approach.</li>
-        <li>Evaluating WASH inequalities in slums across Dhaka’s two city corporations.</li>
-        <li>Microplastic abundance in urban road dust across Dhaka City, Bangladesh.</li>
-      </ul>
-    </section>
-
-    <section class="section card" id="skills">
-      <h2>Technical Skills</h2>
-      <div class="skill-cloud">
-        <span>EPA SWMM</span>
-        <span>EPANET</span>
-        <span>ArcGIS Pro</span>
-        <span>AutoCAD</span>
-        <span>ETABS</span>
-        <span>SAP2000</span>
-        <span>Python</span>
-        <span>MATLAB</span>
-        <span>Design-Expert</span>
-        <span>MS Excel</span>
-        <span>LaTeX</span>
-        <span>Canva</span>
+    <div class="skills-grid">
+      <div class="skill-cell">
+        <div class="skill-cat">Environmental Modelling</div>
+        <div class="skill-list">EPA SWMM, EPANET, Etank, Bioscreen</div>
       </div>
-    </section>
-
-    <section class="section contact-section" id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:mohsinatahmed@iut-dhaka.edu">mohsinatahmed@iut-dhaka.edu</a></p>
-      <p>Location: Dhaka, Bangladesh</p>
-      <div class="social-links">
-        <a href="https://linkedin.com/in/mohsinat-ahmed-laboni" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://scholar.google.com/citations?user=O_qegIwAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-        <a href="https://orcid.org/0009-0007-2789-8315" target="_blank" rel="noopener">ORCID</a>
-        <a href="https://researchgate.net/profile/Mohsinat-Laboni" target="_blank" rel="noopener">ResearchGate</a>
+      <div class="skill-cell">
+        <div class="skill-cat">GIS</div>
+        <div class="skill-list">ArcGIS Pro</div>
       </div>
-    </section>
-  </main>
+      <div class="skill-cell">
+        <div class="skill-cat">Structural Analysis</div>
+        <div class="skill-list">AutoCAD, ETABS, SAP2000</div>
+      </div>
+      <div class="skill-cell">
+        <div class="skill-cat">Programming</div>
+        <div class="skill-list">Python, MATLAB</div>
+      </div>
+      <div class="skill-cell">
+        <div class="skill-cat">Statistical Modelling</div>
+        <div class="skill-list">Design-Expert, MS Excel</div>
+      </div>
+      <div class="skill-cell">
+        <div class="skill-cat">Design &amp; Media</div>
+        <div class="skill-list">Adobe Photoshop, Canva, Sony Vegas Pro, After Effects</div>
+      </div>
+    </div>
 
-  <footer>
-    <p>© 2026 Mohsinat Ahmed Laboni. Built as a simple academic portfolio website.</p>
-  </footer>
+    <div style="margin-top:40px">
+      <p style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:20px;">Certifications</p>
+      <div class="cert-list">
+        <div class="cert-item">
+          GIS, Mapping, and Spatial Analysis Specialization
+          <span class="cert-issuer">University of Toronto</span>
+        </div>
+        <div class="cert-item">
+          ESG and Climate Change
+          <span class="cert-issuer">UPenn</span>
+        </div>
+        <div class="cert-item">
+          Climate Change: Carbon Capture and Storage
+          <span class="cert-issuer">U. Edinburgh</span>
+        </div>
+        <div class="cert-item">
+          Climate Change: Mitigation and Adaptation
+          <span class="cert-issuer">CFR</span>
+        </div>
+        <div class="cert-item">
+          Python for Data Science, AI &amp; Development
+          <span class="cert-issuer">IBM</span>
+        </div>
+        <div class="cert-item">
+          Introduction to Image Processing
+          <span class="cert-issuer">MathWorks</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="fade-in">
+    <p class="section-label">Contact</p>
+    <div class="contact-grid">
+      <div class="contact-block">
+        <h3>Email</h3>
+        <a href="mailto:mohsinatahmed@iut-dhaka.edu">mohsinatahmed@iut-dhaka.edu</a>
+      </div>
+      <div class="contact-block">
+        <h3>Profiles</h3>
+        <a href="https://linkedin.com/in/mohsinat-ahmed-laboni" target="_blank">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=O_qegIwAAAAJ" target="_blank">Google Scholar</a>
+        <a href="https://orcid.org/0009-0007-2789-8315" target="_blank">ORCID</a>
+        <a href="https://researchgate.net/profile/Mohsinat-Laboni" target="_blank">ResearchGate</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span>© 2026 Mohsinat Ahmed Laboni</span>
+  <span style="color:var(--rule)">Kafrul, Dhaka, Bangladesh</span>
+</footer>
+
+<script>
+  // Fade-in on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Active nav link highlight
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(sec => {
+      if (window.scrollY >= sec.offsetTop - 80) current = sec.id;
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current
+        ? 'var(--accent)' : '';
+    });
+  });
+</script>
+
 </body>
 </html>
