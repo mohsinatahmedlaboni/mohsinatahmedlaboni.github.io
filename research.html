@@ -169,6 +169,7 @@
       border: 2px solid var(--sage);
       background: var(--sage-pale);
       flex-shrink: 0;
+      position: relative;
     }
 
     .research-thumb img {
@@ -176,6 +177,23 @@
       height: 100%;
       object-fit: cover;
       display: block;
+    }
+
+    .research-thumb.image-missing::before {
+      content: attr(data-label);
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--sage);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 16px;
+      border: 2px dashed var(--sage);
     }
 
     .placeholder {
@@ -324,6 +342,7 @@
       <li><a href="research.html" class="active">Research</a></li>
       <li><a href="experience.html">Experience</a></li>
       <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
       <li><a href="cv.html">CV</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -348,47 +367,45 @@
     <span class="tag">WASH Inequality</span>
   </div>
 
-  <h2>Journal Papers</h2>
+  <h2>Publications</h2>
 
   <div class="research-list">
 
     <div class="research-item">
-      <div class="research-thumb placeholder">
-        Microplastic<br>Research Image
+      <div class="research-thumb" data-label="Water Quality Image">
+        <img src="wqi.png" alt="Turag River water quality research"
+             onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');">
       </div>
 
       <div>
         <div class="paper-title">
-          Machine Learning-Based Prediction and Mechanistic Insights into Coagulant-Specific Microplastic Removal
+          Study of Yearly Variation of Water Quality Parameters and Indices of the Turag River of Bangladesh
         </div>
 
         <div class="paper-authors">
-          M. A. Laboni, R. M. Prantor, M. R. Karim, M. S. Islam, A. B. M. Baki, W. Sadiqa,
-          A. T. Nabila &amp; G. Andaluri
+          Laboni, M. A., Tashfiah, R., &amp; Ahsan, A.
         </div>
 
         <div class="paper-venue">
-          <span class="badge badge-review">Under Review</span>
-          Journal Submission · 2025
+          <span class="badge badge-pub">Published</span>
+          Proceedings of the 7th International Conference on Advances in Civil Engineering · Paper ID 400 · 2024 · pp. 3316–3323
+        </div>
+
+        <div class="paper-links">
+          <a href="https://www.researchgate.net/publication/397638564_Study_of_yearly_variation_of_water_quality_parameters_and_indices_of_the_Turag_river_of_Bangladesh" target="_blank">ResearchGate</a>
         </div>
 
         <p class="paper-desc">
-          This study investigates microplastic removal performance using data-driven modeling and
-          coagulant-specific analysis, connecting experimental water treatment outcomes with machine
-          learning-based prediction.
+          This study examines yearly variation in water quality parameters and indices of the Turag River,
+          highlighting environmental pressure on an important urban water body in Bangladesh.
         </p>
       </div>
     </div>
 
-  </div>
-
-  <h2>Conference Papers</h2>
-
-  <div class="research-list">
-
     <div class="research-item">
-      <div class="research-thumb">
-        <img src="pm2.5.png" alt="PM2.5 prediction research">
+      <div class="research-thumb" data-label="PM₂.₅ Prediction Image">
+        <img src="pm2.5.jpeg" alt="PM2.5 prediction in Dhaka using machine learning"
+             onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');">
       </div>
 
       <div>
@@ -397,16 +414,16 @@
         </div>
 
         <div class="paper-authors">
-          M. A. Laboni, R. Tashfiah &amp; A. Ahsan
+          Laboni, M. A., Tashfiah, R., &amp; Ahsan, A.
         </div>
 
         <div class="paper-venue">
           <span class="badge badge-pub">Published</span>
-          ICCERI 2025 · pp. 2891–2896
+          Proceedings of the International Conference on Civil Engineering Research &amp; Innovations · Paper ID 634 · 2025 · pp. 2891–2896
         </div>
 
         <div class="paper-links">
-          <a href="https://www.researchgate.net/publication/399962032" target="_blank">ResearchGate</a>
+          <a href="https://www.researchgate.net/publication/399962032_A_Data-Driven_Approach_to_PM25_Prediction_in_Dhaka_using_Machine_Learning_Techniques" target="_blank">ResearchGate</a>
         </div>
 
         <p class="paper-desc">
@@ -417,31 +434,28 @@
     </div>
 
     <div class="research-item">
-      <div class="research-thumb">
-        <img src="wqi.png" alt="Water quality research">
+      <div class="research-thumb" data-label="WASH Inequality Image">
+        <img src="prantor.png" alt="WASH inequality research in Dhaka slums"
+             onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');">
       </div>
 
       <div>
         <div class="paper-title">
-          Study of Yearly Variation of Water Quality Parameters and Indices of the Turag River of Bangladesh
+          Rights and Realities: Evaluating WASH Inequalities in Slums Across Dhaka’s Two City Corporations
         </div>
 
         <div class="paper-authors">
-          M. A. Laboni, R. Tashfiah &amp; A. Ahsan
+          Rimi, N. A., Prantor, R. M., Absar, N. M., Laboni, M. A., Fariha, Z., &amp; Sharaf, K.
         </div>
 
         <div class="paper-venue">
           <span class="badge badge-pub">Published</span>
-          7th ICACE 2024 · pp. 3316–3323
-        </div>
-
-        <div class="paper-links">
-          <a href="https://www.researchgate.net/publication/397638564" target="_blank">ResearchGate</a>
+          International Conference on Climate Extremes, Disasters, Anticipatory Actions and Human Health · CEDAAH-2026
         </div>
 
         <p class="paper-desc">
-          This study examines yearly changes in water quality indicators and index-based assessment
-          for the Turag River, highlighting environmental pressure on an important urban water body.
+          This study evaluates WASH inequalities in slum communities across Dhaka’s two city corporations,
+          focusing on urban vulnerability, public health, and unequal access to essential services.
         </p>
       </div>
     </div>
@@ -453,34 +467,36 @@
   <div class="research-list">
 
     <div class="research-item">
-      <div class="research-thumb">
-        <img src="prantor.jpg" alt="WASH inequality research in Dhaka slums">
+      <div class="research-thumb placeholder">
+        Microplastic<br>Removal Image
       </div>
 
       <div>
         <div class="paper-title">
-          Rights and Realities: Evaluating WASH Inequalities in Slums Across Dhaka's Two City Corporations
+          Predicting and Enhancing Microplastics Removal: A Data-Driven Mixture-of-Experts Approach for Coagulant-Specific Performance
         </div>
 
         <div class="paper-authors">
-          M. A. Laboni, N. A. Rimi, R. M. Prantor, N. M. Absar, Z. Fariha &amp; K. Sharaf
+          Laboni, M. A., Prantor, R. M., Karim, M. R., Islam, M. S., Baki, A. B. M., Sadiqa, W., Nabila, A. T., &amp; Andaluri, G.
         </div>
 
         <div class="paper-venue">
-          <span class="badge badge-wip">In Progress</span>
-          CEDAAH-2026 Conference
+          <span class="badge badge-review">Submitted</span>
+          Submitted for journal publication · 2025
         </div>
 
         <p class="paper-desc">
-          This work examines unequal access to water, sanitation, and hygiene conditions across
-          urban slum communities in Dhaka, with attention to public health and urban vulnerability.
+          This study investigates microplastic removal performance using data-driven modeling and
+          coagulant-specific analysis, connecting experimental water treatment outcomes with machine
+          learning-based prediction.
         </p>
       </div>
     </div>
 
     <div class="research-item">
-      <div class="research-thumb">
-        <img src="mproad.png" alt="Urban road dust microplastic research in Dhaka">
+      <div class="research-thumb" data-label="Road Dust Microplastic Image">
+        <img src="mproad.png" alt="Urban road dust microplastic research in Dhaka"
+             onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');">
       </div>
 
       <div>
@@ -490,12 +506,12 @@
 
         <div class="paper-venue">
           <span class="badge badge-wip">In Progress</span>
-          Expected Submission · 2026
+          Expected submission · 2026
         </div>
 
         <p class="paper-desc">
           This ongoing research investigates microplastic abundance in road dust across Dhaka City,
-          using probabilistic modeling to better understand urban environmental contamination patterns.
+          using probabilistic modelling to better understand urban environmental contamination patterns.
         </p>
       </div>
     </div>
