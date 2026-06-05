@@ -4,52 +4,320 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Research – Mohsinat Ahmed Laboni</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --navy:#073259; --sage:#b1bca0; --sage-pale:#f3f5f0; --ink:#1a1a1a; --muted:#555; --font:'Poppins',Arial,sans-serif; --max:900px; }
-    body { font-family:var(--font); color:var(--ink); background:#fff; font-weight:300; font-size:15px; line-height:1.8; }
-    nav { background:var(--navy); position:sticky; top:0; z-index:100; border-bottom:3px solid var(--sage); }
-    .nav-inner { max-width:var(--max); margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; height:54px; }
-    .nav-brand { color:#fff; text-decoration:none; font-weight:600; font-size:15px; }
-    .nav-brand span { color:var(--sage); }
-    .nav-links { list-style:none; display:flex; gap:2px; }
-    .nav-links a { color:rgba(255,255,255,0.7); text-decoration:none; font-size:11.5px; font-weight:500; letter-spacing:0.05em; padding:6px 11px; border-radius:4px; transition:all 0.2s; }
-    .nav-links a:hover, .nav-links a.active { color:#fff; background:rgba(177,188,160,0.25); }
-    .nav-links a.active { color:var(--sage); }
-    .page { max-width:var(--max); margin:0 auto; padding:64px 24px 80px; }
-    h1 { font-size:36px; font-weight:700; color:var(--navy); margin-bottom:8px; }
-    .intro { color:var(--muted); margin-bottom:48px; font-size:15px; }
-    .interest-tags { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:48px; }
-    .tag { padding:5px 14px; background:var(--sage-pale); color:var(--navy); border:1.5px solid var(--sage); border-radius:3px; font-size:12px; font-weight:500; }
-    h2 { font-size:13px; font-weight:700; color:var(--sage); letter-spacing:0.15em; text-transform:uppercase; margin:40px 0 20px; }
-    .paper { border-top:1px solid #eee; padding:24px 0; }
-    .paper:last-child { border-bottom:1px solid #eee; }
-    .paper-title { font-size:16px; font-weight:600; color:var(--navy); line-height:1.45; margin-bottom:6px; }
-    .paper-authors { font-size:13px; color:var(--muted); margin-bottom:4px; font-style:italic; }
-    .paper-venue { font-size:13px; color:var(--ink); font-weight:500; margin-bottom:10px; }
-    .badge { display:inline-block; font-size:9px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:3px 9px; border-radius:3px; margin-right:8px; }
-    .badge-pub { background:var(--navy); color:#fff; }
-    .badge-review { background:var(--sage-pale); color:var(--navy); border:1px solid var(--sage); }
-    .badge-wip { background:#fff3; color:var(--muted); border:1px solid #ddd; }
-    .paper-links { display:flex; gap:10px; flex-wrap:wrap; }
-    .paper-links a { font-size:11px; font-weight:600; color:var(--navy); text-decoration:none; letter-spacing:0.05em; border-bottom:1.5px solid var(--sage); padding-bottom:1px; transition:color 0.2s; }
-    .paper-links a:hover { color:var(--sage); }
-    details summary { cursor:pointer; font-size:11px; font-weight:600; color:var(--sage); letter-spacing:0.06em; text-transform:uppercase; list-style:none; margin-top:10px; transition:color 0.2s; }
-    details summary:hover { color:var(--navy); }
-    details summary::before { content:'▸ '; }
-    details[open] summary::before { content:'▾ '; }
-    .abstract { font-size:13.5px; color:var(--muted); margin-top:10px; line-height:1.8; }
-    footer { border-top:1px solid #eee; text-align:center; font-size:12px; color:#aaa; padding:28px 24px; }
-    @media (max-width:680px) { .nav-links a { font-size:10px; padding:5px 7px; } }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --navy: #073259;
+      --sage: #b1bca0;
+      --sage-pale: #f3f5f0;
+      --ink: #1a1a1a;
+      --muted: #555;
+      --font: 'Poppins', Arial, sans-serif;
+      --max: 900px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font);
+      color: var(--ink);
+      background: #fff;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    nav {
+      background: var(--navy);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 3px solid var(--sage);
+    }
+
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 54px;
+    }
+
+    .nav-brand {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .nav-brand span {
+      color: var(--sage);
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2px;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 11.5px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      padding: 6px 11px;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #fff;
+      background: rgba(177,188,160,0.25);
+    }
+
+    .nav-links a.active {
+      color: var(--sage);
+    }
+
+    .page {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 64px 24px 80px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .intro {
+      color: var(--muted);
+      margin-bottom: 34px;
+      font-size: 15px;
+      max-width: 760px;
+    }
+
+    .interest-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 52px;
+    }
+
+    .tag {
+      padding: 5px 14px;
+      background: var(--sage-pale);
+      color: var(--navy);
+      border: 1.5px solid var(--sage);
+      border-radius: 3px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    h2 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--sage);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin: 46px 0 22px;
+    }
+
+    .research-list {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .research-item {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 26px;
+      align-items: start;
+      border-top: 1px solid #eee;
+      padding-top: 26px;
+    }
+
+    .research-item:last-child {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 26px;
+    }
+
+    .research-thumb {
+      width: 210px;
+      height: 130px;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 2px solid var(--sage);
+      background: var(--sage-pale);
+      flex-shrink: 0;
+    }
+
+    .research-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border: 2px dashed var(--sage);
+      color: var(--sage);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 16px;
+    }
+
+    .paper-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.45;
+      margin-bottom: 6px;
+    }
+
+    .paper-authors {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 5px;
+      font-style: italic;
+    }
+
+    .paper-venue {
+      font-size: 13px;
+      color: var(--ink);
+      font-weight: 500;
+      margin-bottom: 9px;
+    }
+
+    .paper-desc {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.75;
+      margin-top: 8px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 3px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    .badge-pub {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .badge-review {
+      background: var(--sage-pale);
+      color: var(--navy);
+      border: 1px solid var(--sage);
+    }
+
+    .badge-wip {
+      background: #fff;
+      color: var(--muted);
+      border: 1px solid #ddd;
+    }
+
+    .paper-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .paper-links a {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--navy);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      border-bottom: 1.5px solid var(--sage);
+      padding-bottom: 1px;
+      transition: color 0.2s;
+    }
+
+    .paper-links a:hover {
+      color: var(--sage);
+    }
+
+    footer {
+      border-top: 1px solid #eee;
+      text-align: center;
+      font-size: 12px;
+      color: #aaa;
+      padding: 28px 24px;
+    }
+
+    @media (max-width: 760px) {
+      .nav-inner {
+        height: auto;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+      }
+
+      .nav-links a {
+        font-size: 10px;
+        padding: 5px 7px;
+      }
+
+      .research-item {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .research-thumb {
+        width: 100%;
+        height: 180px;
+      }
+    }
   </style>
 </head>
+
 <body>
+
 <nav>
   <div class="nav-inner">
     <a class="nav-brand" href="index.html">Mohsinat <span>A. Laboni</span></a>
+
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -62,65 +330,212 @@
     </ul>
   </div>
 </nav>
+
 <div class="page">
+
   <h1>Research</h1>
-  <p class="intro">My research sits at the intersection of environmental engineering, data science, and public health — with a focus on air quality, water treatment, and urban environmental inequalities in South Asia.</p>
+
+  <p class="intro">
+    My research sits at the intersection of environmental engineering, data science, and public health,
+    with a focus on air quality, water treatment, carbon emissions, and urban environmental inequalities
+    in South Asia.
+  </p>
 
   <div class="interest-tags">
-    <span class="tag">Air Quality Modelling</span>
-    <span class="tag">PM₂.₅ &amp; Machine Learning</span>
     <span class="tag">Microplastics</span>
-    <span class="tag">Carbon Emissions (GHG / IPCC)</span>
+    <span class="tag">PM₂.₅ &amp; Machine Learning</span>
+    <span class="tag">Carbon Emissions</span>
     <span class="tag">GIS &amp; Remote Sensing</span>
-    <span class="tag">WASH Inequalities</span>
-    <span class="tag">Emission Inventories</span>
+    <span class="tag">WASH Inequality</span>
   </div>
 
   <h2>Journal Papers</h2>
 
-  <div class="paper">
-    <div class="paper-title">Predicting and Enhancing Microplastics Removal: A Data-Driven Mixture-of-Experts Approach for Coagulant-Specific Performance</div>
-    <div class="paper-authors">M. A. Laboni, R. M. Prantor, M. R. Karim, M. S. Islam, A. B. M. Baki, W. Sadiqa, A. T. Nabila &amp; G. Andaluri</div>
-    <div class="paper-venue"><span class="badge badge-review">Under Review</span>Journal Submission · 2025</div>
-    <details>
-      <summary>Abstract</summary>
-      <p class="abstract">This paper develops a data-driven Mixture-of-Experts framework to predict and enhance the removal of microplastics through coagulation–flocculation treatment, modelling coagulant-specific performance across varied water quality conditions.</p>
-    </details>
+  <div class="research-list">
+
+    <div class="research-item">
+      <div class="research-thumb placeholder">
+        Microplastic<br>Research Image
+      </div>
+
+      <!-- When you upload the image, replace the placeholder above with this:
+      <div class="research-thumb">
+        <img src="images/microplastic-removal.jpg" alt="Microplastic removal research">
+      </div>
+      -->
+
+      <div>
+        <div class="paper-title">
+          Machine Learning-Based Prediction and Mechanistic Insights into Coagulant-Specific Microplastic Removal
+        </div>
+
+        <div class="paper-authors">
+          M. A. Laboni, R. M. Prantor, M. R. Karim, M. S. Islam, A. B. M. Baki, W. Sadiqa,
+          A. T. Nabila &amp; G. Andaluri
+        </div>
+
+        <div class="paper-venue">
+          <span class="badge badge-review">Under Review</span>
+          Journal Submission · 2025
+        </div>
+
+        <p class="paper-desc">
+          This study investigates microplastic removal performance using data-driven modeling and
+          coagulant-specific analysis, connecting experimental water treatment outcomes with machine
+          learning-based prediction.
+        </p>
+      </div>
+    </div>
+
   </div>
 
   <h2>Conference Papers</h2>
 
-  <div class="paper">
-    <div class="paper-title">A Data-Driven Approach to PM₂.₅ Prediction in Dhaka Using Machine Learning Techniques</div>
-    <div class="paper-authors">M. A. Laboni, R. Tashfiah &amp; A. Ahsan</div>
-    <div class="paper-venue"><span class="badge badge-pub">Published</span>ICCERI 2025 · pp. 2891–2896</div>
-    <div class="paper-links">
-      <a href="https://www.researchgate.net/publication/399962032" target="_blank">ResearchGate</a>
-    </div>
-  </div>
+  <div class="research-list">
 
-  <div class="paper">
-    <div class="paper-title">Study of Yearly Variation of Water Quality Parameters and Indices of the Turag River of Bangladesh</div>
-    <div class="paper-authors">M. A. Laboni, R. Tashfiah &amp; A. Ahsan</div>
-    <div class="paper-venue"><span class="badge badge-pub">Published</span>7th ICACE 2024 · pp. 3316–3323</div>
-    <div class="paper-links">
-      <a href="https://www.researchgate.net/publication/397638564" target="_blank">ResearchGate</a>
+    <div class="research-item">
+      <div class="research-thumb placeholder">
+        PM₂.₅<br>Prediction Image
+      </div>
+
+      <!-- Replace later with:
+      <div class="research-thumb">
+        <img src="images/pm25-prediction.jpg" alt="PM2.5 prediction in Dhaka using machine learning">
+      </div>
+      -->
+
+      <div>
+        <div class="paper-title">
+          A Data-Driven Approach to PM₂.₅ Prediction in Dhaka Using Machine Learning Techniques
+        </div>
+
+        <div class="paper-authors">
+          M. A. Laboni, R. Tashfiah &amp; A. Ahsan
+        </div>
+
+        <div class="paper-venue">
+          <span class="badge badge-pub">Published</span>
+          ICCERI 2025 · pp. 2891–2896
+        </div>
+
+        <div class="paper-links">
+          <a href="https://www.researchgate.net/publication/399962032" target="_blank">ResearchGate</a>
+        </div>
+
+        <p class="paper-desc">
+          This work applies machine learning techniques to predict PM₂.₅ concentration patterns in Dhaka,
+          supporting data-driven air quality assessment in a dense urban context.
+        </p>
+      </div>
     </div>
+
+    <div class="research-item">
+      <div class="research-thumb placeholder">
+        Water Quality<br>Research Image
+      </div>
+
+      <!-- Replace later with:
+      <div class="research-thumb">
+        <img src="images/turag-water-quality.jpg" alt="Turag River water quality research">
+      </div>
+      -->
+
+      <div>
+        <div class="paper-title">
+          Study of Yearly Variation of Water Quality Parameters and Indices of the Turag River of Bangladesh
+        </div>
+
+        <div class="paper-authors">
+          M. A. Laboni, R. Tashfiah &amp; A. Ahsan
+        </div>
+
+        <div class="paper-venue">
+          <span class="badge badge-pub">Published</span>
+          7th ICACE 2024 · pp. 3316–3323
+        </div>
+
+        <div class="paper-links">
+          <a href="https://www.researchgate.net/publication/397638564" target="_blank">ResearchGate</a>
+        </div>
+
+        <p class="paper-desc">
+          This study examines yearly changes in water quality indicators and index-based assessment
+          for the Turag River, highlighting environmental pressure on an important urban water body.
+        </p>
+      </div>
+    </div>
+
   </div>
 
   <h2>Work in Progress</h2>
 
-  <div class="paper">
-    <div class="paper-title">Rights and Realities: Evaluating WASH Inequalities in Slums Across Dhaka's Two City Corporations</div>
-    <div class="paper-authors">M. A. Laboni, N. A. Rimi, R. M. Prantor, N. M. Absar, Z. Fariha &amp; K. Sharaf</div>
-    <div class="paper-venue"><span class="badge badge-wip">In Progress</span>CEDAAH-2026 Conference</div>
+  <div class="research-list">
+
+    <div class="research-item">
+      <div class="research-thumb placeholder">
+        WASH<br>Inequality Image
+      </div>
+
+      <!-- Replace later with:
+      <div class="research-thumb">
+        <img src="images/wash-inequality.jpg" alt="WASH inequality research in Dhaka slums">
+      </div>
+      -->
+
+      <div>
+        <div class="paper-title">
+          Rights and Realities: Evaluating WASH Inequalities in Slums Across Dhaka's Two City Corporations
+        </div>
+
+        <div class="paper-authors">
+          M. A. Laboni, N. A. Rimi, R. M. Prantor, N. M. Absar, Z. Fariha &amp; K. Sharaf
+        </div>
+
+        <div class="paper-venue">
+          <span class="badge badge-wip">In Progress</span>
+          CEDAAH-2026 Conference
+        </div>
+
+        <p class="paper-desc">
+          This work examines unequal access to water, sanitation, and hygiene conditions across
+          urban slum communities in Dhaka, with attention to public health and urban vulnerability.
+        </p>
+      </div>
+    </div>
+
+    <div class="research-item">
+      <div class="research-thumb placeholder">
+        Road Dust<br>Microplastic Image
+      </div>
+
+      <!-- Replace later with:
+      <div class="research-thumb">
+        <img src="images/road-dust-microplastic.jpg" alt="Urban road dust microplastic research in Dhaka">
+      </div>
+      -->
+
+      <div>
+        <div class="paper-title">
+          Microplastic Abundance in Urban Road Dust Across Dhaka City, Bangladesh: A Probabilistic Modelling Approach
+        </div>
+
+        <div class="paper-venue">
+          <span class="badge badge-wip">In Progress</span>
+          Expected Submission · 2026
+        </div>
+
+        <p class="paper-desc">
+          This ongoing research investigates microplastic abundance in road dust across Dhaka City,
+          using probabilistic modeling to better understand urban environmental contamination patterns.
+        </p>
+      </div>
+    </div>
+
   </div>
 
-  <div class="paper">
-    <div class="paper-title">Microplastic Abundance in Urban Road Dust Across Dhaka City, Bangladesh: A Probabilistic Modelling Approach</div>
-    <div class="paper-venue"><span class="badge badge-wip">In Progress</span>Expected submission · 2026</div>
-  </div>
 </div>
+
 <footer>© 2026 Mohsinat Ahmed Laboni · Dhaka, Bangladesh</footer>
+
 </body>
 </html>
